@@ -1,24 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import data from "./data.json";
 
-let data = [
-  {
-    maSV: 20187302,
-    firstName: "Đạt",
-    middleName: "Tiến",
-    lastName: "Nguyễn",
-    dateOfBirth: "2000-04-10",
-    className: "IT-VUW17A",
-  },
-  {
-    maSV: 20187287,
-    firstName: "Anh",
-    middleName: "Đức",
-    lastName: "Bùi",
-    dateOfBirth: "2000-10-09",
-    className: "IT-VUW17A",
-  },
-];
 class App extends Component {
   constructor(props) {
     super(props);
