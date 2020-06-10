@@ -1,21 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../css/App.css';
-import Header from './Header';
-import Search from './Search';
-import TableData from './TableData';
+import Option from './Option';
+import SearchForm from './SearchForm';
+import TableResult from './TableResult';
 import AddUser from './AddUser';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Search />
-      <div class="container">
-        <TableData />
-        <AddUser />
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Option: 0
+    }
+  }
+
+  changeOption(value){
+    this.setState({
+      Option: value
+    });
+  }
+
+  display(){
+    switch (this.state.Option) {
+      case 1:
+        return <SearchForm />
+      case 2:
+        return <TableResult />
+      case 3:
+        return <AddUser />
+      default:
+        break;
+    }
+  }
+  
+  render() {
+    return (
+      <div className="App">
+        <Option 
+          changeOption={(value) => this.changeOption(value)}
+        />
+        {this.display()}
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

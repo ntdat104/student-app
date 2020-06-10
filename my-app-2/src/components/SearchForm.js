@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import "../css/AddUser.css";
+import "../css/SearchForm.css";
 
-class AddUser extends Component {
+class SearchForm extends Component {
     render() {
         return (
             <div>
-                <h1>AddUser</h1>
+                <h1>SearchForm</h1>
             </div>
         );
     }
 }
 
-export default AddUser;
+export default SearchForm;
