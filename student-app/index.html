@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-app</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="title">Project quản lý thành viên bằng React JS với dữ liệu json</h1>
+    <form class="search">
+        <input type="text" placeholder="Nhập từ khóa">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+    <div class="table">
+        <div class="table__result">
+            <table>
+                <tr>
+                  <th>STT</th>
+                  <th>Tên</th> 
+                  <th>Điện thoại</th>
+                  <th>Quyền</th>
+                  <th>Hành động</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                      <button type="button">Sửa</button>
+                      <button type="button">Xóa</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>
+                    <button type="button">Sửa</button>
+                    <button type="button">Xóa</button>
+                </td>
+                </tr>
+              </table>
+        </div>
+        <form class="table__input">
+            <input type="text" placeholder="Nhập tên">
+            <input type="text" placeholder="Nhập sdt">
+            <select>
+                <option>Admin</option>
+                <option>User</option>
+                <option>Edit</option>
+            </select>
+            <button type="button">Thêm</button>
+        </form>
+    </div>
+</body>
+</html>

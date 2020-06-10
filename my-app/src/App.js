@@ -8,6 +8,12 @@ class App extends Component {
     this.state = {
       data: data,
       option: 0,
+      maSV: null,
+      lastName: null,
+      middleName: null,
+      firstName: null,
+      dateOfBirth: null,
+      className: null,
     };
   }
 
@@ -45,12 +51,12 @@ class App extends Component {
   create() {
     return (
       <form method="get">
-        <input type="number" placeholder="Mã SV" />
-        <input type="text" placeholder="Họ" />
-        <input type="text" placeholder="Đệm" />
-        <input type="text" placeholder="Tên" />
-        <input type="date" placeholder="Ngày sinh" />
-        <input type="text" placeholder="Lớp" />
+        <input name="maSV" type="number" placeholder="Mã SV" />
+        <input name="lastName" type="text" placeholder="Họ" />
+        <input name="middleName" type="text" placeholder="Đệm" />
+        <input name="firstName" type="text" placeholder="Tên" />
+        <input name="dateOfBirth" type="date" placeholder="Ngày sinh" />
+        <input name="className" type="text" placeholder="Lớp" />
         <button type="submit">
           Submit
         </button>

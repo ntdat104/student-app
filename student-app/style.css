@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  width: 500px;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+
+.search {
+  width: 1000px;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+.search input {
+  width: 300px;
+  height: 25px;
+}
+.search button {
+  width: 100px;
+  height: 25px;
+}
+
+.table {
+  width: 1000px;
+  margin: 0px auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.table table {
+  width: 800px;
+}
+.table table,
+.table th,
+.table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 5px;
+}
+.table th {
+  text-align: left;
+}
+.table__input {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */
