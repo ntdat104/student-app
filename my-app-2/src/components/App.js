@@ -25,15 +25,15 @@ class App extends Component {
       case 1:
         return (
           <SearchForm
-            getTextSearch={(e) => this.getTextSearch(e)}
-            showResultRow={() => this.showResultRow()}
+            handleChange={(e) => this.handleChange(e)}
+            handleSubmit={(e) => this.handleSubmit(e)}
           />
         );
       case 2:
         return (
           <AddUser
-            getDataFromAddUser={(e) => this.getDataFromAddUser(e)}
-            showResultData={() => this.showResultData()}
+            handleChange={(e) => this.handleChange(e)}
+            handleSubmit={(e) => this.handleSubmit(e)}
           />
         );
       default:
@@ -41,52 +41,49 @@ class App extends Component {
     }
   }
 
-  getTextSearch(e) {
+  handleChange(e){
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
     this.setState({
-      textSearch: e.target.value,
+      [name]: value
     });
+    console.log(value);
   }
 
-  showResultRow() {
+  handleSubmit(e){
+    e.preventDefault();
     this.setState({
-      text: this.state.textSearch,
+      text: this.state.textSearch
     });
+    this.checkAddUserValid()
   }
 
-  showTableResult() {
-    let data = [];
+  showResult() {
+    let Users = [];
     if (this.state.text) {
       this.state.data.forEach((item) => {
         if (item.name.indexOf(this.state.text) !== -1) {
-          data.push(item);
+          Users.push(item);
         }
       });
-      return <TableResult data={data} />;
+      return <TableResult data={Users} />;
     } else return <TableResult data={this.state.data} />;
   }
 
-  getDataFromAddUser(e) {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  }
-
-  showResultData() {
-    let newData = this.state.data;
-    if (this.state.name === undefined || this.state.tel === undefined || this.state.permission === undefined){
-      this.setState({
-        data: newData
-      });
-    } else {
+  checkAddUserValid() {
+    // let newData = this.state.data;
+    if (this.state.name && this.state.tel && this.state.permission){
       let newUser = {
         name: this.state.name,
         tel: this.state.tel,
         permission: parseInt(this.state.permission),
       };
-      newData.push(newUser);
-      this.setState({
-        data: newData
-      });
+      // newData.push(newUser);
+      this.state.data.push(newUser);
+      // this.setState({
+      //   data: newData
+      // });
     }
   }
 
@@ -95,7 +92,7 @@ class App extends Component {
       <div className="App">
         <Option changeOption={(value) => this.changeOption(value)} />
         {this.display()}
-        {this.showTableResult()}
+        {this.showResult()}
       </div>
     );
   }
