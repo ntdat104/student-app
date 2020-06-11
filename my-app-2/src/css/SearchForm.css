@@ -1,0 +1,12 @@
+.SearchForm{
+    margin: 5px 0px;
+}
+
+.SearchForm input{
+    width: 200px;
+    padding: 2px 0px;
+}
+
+.SearchForm button{
+    padding: 2px 15px;
+}

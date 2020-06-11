@@ -1,0 +1,39 @@
+.AddUser{
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid blue;
+}
+
+.AddUser h1{
+    padding: 10px;
+    background-color: #cccccc;
+    text-align: center;
+    font-size: 14px;
+    user-select: none;
+}
+
+.AddUser input{
+    padding: 5px;
+    margin: 0px 10px;
+    margin-top: 10px;
+}
+
+.AddUser select{
+    padding: 5px;
+    margin: 0px 10px;
+    margin-top: 10px;
+}
+
+.AddUser button{
+    outline: none;
+    border: none;
+    padding: 5px;
+    margin: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}

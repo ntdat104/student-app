@@ -1,0 +1,21 @@
+.TableResult {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.TableResult th{
+    font-weight: bold;
+}
+
+.TableResult td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+.TableResult tr:nth-child(even) {
+  background-color: #dddddd;
+}
