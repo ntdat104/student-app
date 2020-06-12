@@ -72,18 +72,13 @@ class App extends Component {
   }
 
   checkAddUserValid() {
-    // let newData = this.state.data;
     if (this.state.name && this.state.tel && this.state.permission){
       let newUser = {
         name: this.state.name,
         tel: this.state.tel,
         permission: parseInt(this.state.permission),
       };
-      // newData.push(newUser);
       this.state.data.push(newUser);
-      // this.setState({
-      //   data: newData
-      // });
     }
   }
 
