@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../css/ResultRow.css";
 
 class ResultRow extends Component {
   checkPermission(){
@@ -21,8 +22,8 @@ class ResultRow extends Component {
         <td>{this.props.data.tel}</td>
         {this.checkPermission()}
         <td>
-          <button>Sửa</button>
-          <button>Xóa</button>
+          <button className="ResultRowBtn" onClick={() => this.props.editUserStatus()}>Sửa</button>
+          <button className="ResultRowBtn">Xóa</button>
         </td>
       </tr>
     );
