@@ -1,4 +1,4 @@
-.AddUser {
+.EditUser {
   margin: 10px 0px;
   width: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   border: 1px solid black;
 }
 
-.AddUser input,
+.EditUser input,
 select {
   flex-grow: 1;
   padding: 5px 0px;
@@ -16,8 +16,8 @@ select {
   border-right: 1px solid black;
 }
 
-.AddUser button {
+.EditUser button {
   padding: 5px 10px;
-  border: none;
   outline: none;
+  border: none;
 }

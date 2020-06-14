@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.App{
+.App {
   padding: 5px 20px;
 }
 
-.addUserBtn{
+.addUserBtn {
   width: 100%;
   padding: 5px 0px;
   margin: 5px 0px;

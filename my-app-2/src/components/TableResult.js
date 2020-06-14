@@ -4,8 +4,14 @@ import ResultRow from "./ResultRow";
 
 class TableResult extends Component {
   mappingData() {
-    return this.props.data.map((value, index) => (
-      <ResultRow editUserStatus={(user) => this.props.editUserStatus(value)} key={index} stt={index} data={value} />
+    return this.props.data.map((user, index) => (
+      <ResultRow
+        getUserDelete={() => this.props.getUserDelete(user, index)}
+        getUserEdit={() => this.props.getUserEdit(user, index)}
+        key={index}
+        stt={index}
+        data={user}
+      />
     ));
   }
 

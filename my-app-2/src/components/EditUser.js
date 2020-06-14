@@ -1,7 +1,16 @@
 import React, { Component } from "react";
-import "../css/AddUser.css";
+import "../css/EditUser.css";
 
-class AddUser extends Component {
+class EditUser extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: this.props.userEdit.name,
+      tel: this.props.userEdit.tel,
+      permission: this.props.userEdit.permission,
+    };
+  }
+
   handleChange(e) {
     const target = e.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -18,15 +27,16 @@ class AddUser extends Component {
       tel: this.state.tel,
       permission: parseInt(this.state.permission),
     };
-    this.props.getNewUser(user);
+    this.props.getUserUpdate(user);
   }
 
   render() {
     return (
-      <form className="AddUser" onSubmit={(e) => this.handleSubmit(e)}>
+      <form className="EditUser" onSubmit={(e) => this.handleSubmit(e)}>
         <input
           name="name"
           type="text"
+          defaultValue={this.state.name}
           placeholder="Tên User"
           onChange={(e) => this.handleChange(e)}
           required
@@ -34,12 +44,14 @@ class AddUser extends Component {
         <input
           name="tel"
           type="number"
+          defaultValue={this.state.tel}
           placeholder="Điện thoại"
           onChange={(e) => this.handleChange(e)}
           required
         />
         <select
           name="permission"
+          defaultValue={this.state.permission}
           onChange={(e) => this.handleChange(e)}
           required
         >
@@ -48,10 +60,10 @@ class AddUser extends Component {
           <option value={2}>Manager</option>
           <option value={3}>User</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit">Save</button>
       </form>
     );
   }
 }
 
-export default AddUser;
+export default EditUser;

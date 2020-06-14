@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import "../css/ResultRow.css";
 
 class ResultRow extends Component {
-  checkPermission(){
+  checkPermission() {
     switch (this.props.data.permission) {
       case 1:
-        return <td>Admin</td>
+        return <td>Admin</td>;
       case 2:
-        return <td>Manager</td>
+        return <td>Manager</td>;
       case 3:
-        return <td>User</td>
+        return <td>User</td>;
       default:
         break;
     }
@@ -22,8 +22,18 @@ class ResultRow extends Component {
         <td>{this.props.data.tel}</td>
         {this.checkPermission()}
         <td>
-          <button className="ResultRowBtn" onClick={() => this.props.editUserStatus()}>Sửa</button>
-          <button className="ResultRowBtn">Xóa</button>
+          <button
+            className="ResultRowBtn"
+            onClick={() => this.props.getUserEdit()}
+          >
+            Sửa
+          </button>
+          <button
+            className="ResultRowBtn"
+            onClick={() => this.props.getUserDelete()}
+          >
+            Xóa
+          </button>
         </td>
       </tr>
     );
